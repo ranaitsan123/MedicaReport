@@ -20,8 +20,11 @@ and navigate to http://127.0.0.1:5000/ to see it live. to explore the web app
 
 generate-medical-report
 ├── model_assets
+
 │   ├── model.pkl
+
 │   └── vectorizer.pkl
+
 ├── model_dev
 │   ├── data
 │   |   └── data.json
