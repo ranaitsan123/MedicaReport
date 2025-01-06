@@ -1,0 +1,43 @@
+pip install groq
+
+------------------------------------------------------------------------------------------------
+Store the API key as an environment variable: You need to ensure that your GROQ_API_KEY is set as an environment variable in your operating system. You can do this by:
+
+For Windows (Command Prompt):
+
+bash
+Copier le code
+set GROQ_API_KEY=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
+For Windows (PowerShell):
+
+(last time"15/09/2024)=====>powershell
+Copier le code
+$env:GROQ_API_KEY="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"
+For Mac/Linux: Add the following line to your ~/.bashrc, ~/.zshrc, or appropriate shell configuration file:
+
+bash
+Copier le code
+export GROQ_API_KEY="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"
+Then, run source ~/.bashrc or source ~/.zshrc to apply the changes.
+
+Update your Python code: In your report_generator.py, update the way you fetch the API key:
+
+python
+Copier le code
+GROQ_API_KEY = os.environ.get("GROQ_API_KEY")
+This will allow your code to correctly fetch the API key from the environment variable.
+
+Verify that the environment variable is set: You can check if the environment variable is correctly set by printing it in Python:
+
+python
+Copier le code
+import os
+print(os.environ.get("GROQ_API_KEY"))
+If the value is None, it means the environment variable is not set correctly.
+
+Ensure you have the groq library installed: Double-check that you have installed the groq package in your Python environment:
+
+bash
+Copier le code
+pip install groq
+After completing these steps, the Groq client should be able to access the correct API key and work without the error.

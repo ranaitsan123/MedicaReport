@@ -1,35 +1,3 @@
-<!--<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-</head>
-<body>
-    <h2>Login</h2>
-    <form method="POST" action="/login">
-        <label for="username">Username:</label>
-        <input type="text" name="username" required><br>
-        
-        <label for="password">Password:</label>
-        <input type="password" name="password" required><br>
-        
-        <button type="submit">Login</button>
-    </form>
-
-    {% with messages = get_flashed_messages(with_categories=true) %}
-        {% if messages %}
-            <ul>
-                {% for category, message in messages %}
-                    <li>{{ message }}</li>
-                {% endfor %}
-            </ul>
-        {% endif %}
-    {% endwith %}
-</body>
-</html>
--->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,26 +5,63 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/apple-icon.png">
   <link rel="icon" type="image/png" href="/assets/img/favicon.png">
-  <title>VulneraScan - Login</title>
-  <!--     Fonts and icons     -->
+  <title>TawarAI - Login</title>
+  <!-- Fonts and icons -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
   <link href="/assets/css/nucleo-icons.css" rel="stylesheet" />
   <link href="/assets/css/nucleo-svg.css" rel="stylesheet" />
   <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
   <link href="/assets/css/argon-dashboard.css?v=2.0.4" rel="stylesheet" />
+  <style>
+      #weatherContainer {
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        padding: 10px 20px;
+        display: flex;
+        align-items: center;
+        color: black;
+      }
+
+      .weather-info {
+        display: flex;
+        gap: 15px;  /* Adjust the space between items as needed */
+        align-items: center;
+      }
+
+      .weather-info h4,
+      .weather-info p {
+        margin: 0;
+        font-size: 0.9em;
+      }
+  </style>
 </head>
 
 <body class="">
-
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      <div class="alert-container">
+        <ul class="flashes">
+          {% for category, message in messages %}
+            <li class="flash {{ category }}">{{ message }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endif %}
+  {% endwith %}
   <div class="container position-sticky z-index-sticky top-0">
     <div class="row">
       <div class="col-12">
         <nav class="navbar navbar-expand-lg blur border-radius-lg top-0 z-index-3 shadow position-absolute mt-4 py-2 start-0 end-0 mx-4">
           <div class="container-fluid">
-            <a class="navbar-brand font-weight-bolder ms-lg-0 ms-3" href="../pages/dashboard.html">
-              <img src="../logo.png" class="navbar-brand-img h-100" alt="main_logo" style="max-height: 40px;">
-              VulneraScan
+            <a class="navbar-brand font-weight-bolder ms-lg-0 ms-3" href="javascript:;">
+              <img src="/assets/img/logos/vulneraScan_logo.png" class="navbar-brand-img h-100" alt="main_logo" style="max-height: 40px;">
+              TawarAI
             </a>
+          </div>
+          <div class="container-fluid">
+            <div id="weatherContainer">
+                <div id="weatherInfo" class="weather-info d-flex align-items-center"></div>
+            </div>
           </div>
         </nav>
       </div>
@@ -76,10 +81,12 @@
               <div class="card-body">
                 <form action="{{ url_for('login') }}" method="POST">
                   <div class="mb-3">
-                    <input type="text" class="form-control form-control-lg" name="uname" placeholder="Email" aria-label="Email">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control form-control-lg" name="email" id="email" placeholder="Email" aria-label="Email" required>
                   </div>
                   <div class="mb-3">
-                    <input type="password" class="form-control form-control-lg" name="password" placeholder="Mot de passe" aria-label="Password">
+                    <label for="password" class="form-label">Mot de passe</label>
+                    <input type="password" class="form-control form-control-lg" name="password" id="password" placeholder="Mot de passe" aria-label="Password" required>
                   </div>
                   <div class="form-check form-switch">
                     <input class="form-check-input" type="checkbox" id="rememberMe">
@@ -96,7 +103,7 @@
               <div class="card-footer text-center pt-0 px-lg-2 px-1">
                 <p class="mb-4 text-sm mx-auto">
                   Vous n'avez pas de compte ? 
-                  <a href="signup.html" class="text-primary text-gradient font-weight-bold">S'inscrire</a>
+                  <a href="/signup" class="text-primary text-gradient font-weight-bold">S'inscrire</a>
                 </p>
               </div>
             </div>
@@ -126,5 +133,92 @@
   </script>
   <script async defer src="https://buttons.github.io/buttons.js"></script>
   <script src="/assets/js/argon-dashboard.min.js?v=2.0.4"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+      const weatherInfo = document.getElementById('weatherInfo');
+      
+      // Function to get weather data
+      async function getWeather(lat, lon) {
+        const apiKey = '8c524806e7b98e2a8f893b4b0055a2c8';  // Replace with your OpenWeatherMap API key
+        const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
+        
+        try {
+          const response = await fetch(url);
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          const data = await response.json();
+          displayWeather(data);
+        } catch (error) {
+          weatherInfo.innerHTML = 'Unable to retrieve weather data';
+          console.error('There has been a problem with your fetch operation:', error);
+        }
+      }
+      
+      // Function to display weather data
+      function displayWeather(data) {
+        const { name, main, weather } = data;
+        const weatherIcon = getWeatherIcon(weather[0].icon);
+        weatherInfo.innerHTML = `
+          <i class="fas fa-map-marker-alt"></i>
+          <h4>${name}</h4>
+          ${weatherIcon}
+          <p>${weather[0].description}</p>
+          <i class="fas fa-thermometer-half"></i>
+          <p>${main.temp} °C</p>
+          <i class="fas fa-tint"></i>
+          <p>${main.humidity}%</p>
+        `;
+      }
+  
+      // Function to get weather icon based on weather condition code
+      function getWeatherIcon(iconCode) {
+        // Map weather condition codes to corresponding Font Awesome icons
+        const iconMap = {
+          '01d': '<i class="fas fa-sun"></i>',  // clear sky day
+          '01n': '<i class="fas fa-moon"></i>',  // clear sky night
+          '02d': '<i class="fas fa-cloud-sun"></i>',  // few clouds day
+          '02n': '<i class="fas fa-cloud-moon"></i>',  // few clouds night
+          '03d': '<i class="fas fa-cloud"></i>',  // scattered clouds day
+          '03n': '<i class="fas fa-cloud"></i>',  // scattered clouds night
+          '04d': '<i class="fas fa-cloud"></i>',  // broken clouds day
+          '04n': '<i class="fas fa-cloud"></i>',  // broken clouds night
+          '09d': '<i class="fas fa-cloud-showers-heavy"></i>',  // shower rain day
+          '09n': '<i class="fas fa-cloud-showers-heavy"></i>',  // shower rain night
+          '10d': '<i class="fas fa-cloud-sun-rain"></i>',  // rain day
+          '10n': '<i class="fas fa-cloud-moon-rain"></i>',  // rain night
+          '11d': '<i class="fas fa-bolt"></i>',  // thunderstorm day
+          '11n': '<i class="fas fa-bolt"></i>',  // thunderstorm night
+          '13d': '<i class="fas fa-snowflake"></i>',  // snow day
+          '13n': '<i class="fas fa-snowflake"></i>',  // snow night
+          '50d': '<i class="fas fa-smog"></i>',  // mist day
+          '50n': '<i class="fas fa-smog"></i>'   // mist night
+        };
+        return iconMap[iconCode];
+      }
+  
+      // Get user's current location
+      function getLocation() {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(
+            (position) => {
+              const { latitude, longitude } = position.coords;
+              getWeather(latitude, longitude);
+            },
+            (error) => {
+              weatherInfo.innerHTML = 'Unable to retrieve your location';
+              console.error('Geolocation error:', error);
+            }
+          );
+        } else {
+          weatherInfo.innerHTML = 'Geolocation is not supported by this browser';
+        }
+      }
+  
+      // Fetch weather on page load
+      getLocation();
+    });
+  </script>
+  
 </body>
 </html>

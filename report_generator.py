@@ -1,21 +1,10 @@
 from datetime import datetime
 from groq import Groq
 import os
-from dotenv import load_dotenv
-import groq 
 
 # Set up your Groq API key and client
-#groq_key = "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"
-#GROQ_API_KEY = os.environ.get("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") #"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")
-#groq_client = Groq(api_key=GROQ_API_KEY)
-load_dotenv()
-
-
-GROQ_API_KEY = os.getenv("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")  # Retrieve the API key from environment variables
-client = groq.Client(api_key=GROQ_API_KEY)
-'''client = Groq(
-    api_key=os.environ.get("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"),
-)'''
+GROQ_API_KEY = os.environ.get("GROQ_API_KEY")
+groq_client = Groq(api_key=GROQ_API_KEY)
 
 def parse_patient_data(data):
     """
@@ -164,22 +153,3 @@ def generate_full_report(data):
 
     full_report = f"{report}\n\n{diagnosis}\n\n{recommendations}"
     return full_report
-
-"""
-from app import db
-from models import ReportHistory
-from datetime import datetime
-
-def generate_report(user, report_data):
-    # Your logic for generating the PDF
-    filename = f"report_{datetime.now().strftime('%Y%m%d%H%M%S')}.pdf"
-    
-    # Generate and save the PDF file
-    save_pdf(filename, report_data)  # Make sure to implement PDF generation logic here
-    
-    # Log the report in the database
-    new_report = ReportHistory(filename=filename, user_id=user.id)
-    db.session.add(new_report)
-    db.session.commit()
-
-    return filename"""

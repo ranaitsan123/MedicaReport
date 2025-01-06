@@ -90,8 +90,7 @@ def generate_pdf(patient_id):
     }
 
     # Path to wkhtmltopdf executable (adjust this path if necessary)
-    path_to_wkhtmltopdf = "/usr/bin/wkhtmltopdf"  #/usr/share/doc/wkhtmltopdf
-    #r"C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe"
+    path_to_wkhtmltopdf = r"C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe"
     
     # Call the generate_patient_pdf function from pdf_generator.py
     pdf = generate_patient_pdf(report_data, path_to_wkhtmltopdf)
