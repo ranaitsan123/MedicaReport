@@ -4,19 +4,49 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="icon" type="image/png" href="/assets/img/logoVulneraScan1.png">
-  <title>VulneraScan - Signup</title>
+  <title>MedicaReport - Signup</title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
   <link href="/assets/css/nucleo-icons.css" rel="stylesheet" />
   <link href="/assets/css/nucleo-svg.css" rel="stylesheet" />
   <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
   <link href="/assets/css/nucleo-svg.css" rel="stylesheet" />
   <link id="pagestyle" href="/assets/css/argon-dashboard.css?v=2.0.4" rel="stylesheet" />
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style>
+#weatherContainer {
+  background-color: #ffffff4c; /* Solid white background */
+  border-radius: 10px;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  color: white; /* Change text color to black for contrast */
+  top: 10px; /* Adjust the top position */
+  right: 10px; /* Position on the right */
+  z-index: 1000; /* Ensure it appears above other elements */
+}
+
+.weather-info {
+  display: flex;
+  gap: 15px;  /* Adjust the space between items as needed */
+  align-items: center;
+}
+
+.weather-info h4,
+.weather-info p {
+  margin: 0;
+  font-size: 0.9em;
+}
+</style>
 </head>
 
 <body>
   <nav class="navbar navbar-expand-lg position-absolute top-0 z-index-3 w-100 shadow-none my-3 navbar-transparent mt-4">
     <div class="container">
-      <a class="navbar-brand font-weight-bolder ms-lg-0 ms-3 text-white" href="../pages/dashboard.html">VulnerScan</a>
+      <a class="navbar-brand font-weight-bolder ms-lg-0 ms-3" href="javascript:;" style="color: white;">
+        <img src="/assets/img/logos/signup_logo.png" class="navbar-brand-img h-100" alt="main_logo" style="max-height: 40px;">
+        MedicaReport
+      </a>
       <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon mt-2">
           <span class="navbar-toggler-bar bar1"></span>
@@ -27,12 +57,12 @@
       <div class="collapse navbar-collapse" id="navigation">
         <ul class="navbar-nav mx-auto">
           <li class="nav-item">
-            <a class="nav-link d-flex align-items-center me-2 active" aria-current="page" href="../index.html">
+            <a class="nav-link d-flex align-items-center me-2 active" aria-current="page" href="javascript:;">
                 <i class="fa fa-home opacity-6  me-1"></i> Home
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link d-flex align-items-center me-2 active" aria-current="page" href="../about.html">
+            <a class="nav-link d-flex align-items-center me-2 active" aria-current="page" href="/about">
                 <i class="fa fa-info-circle opacity-6  me-1"></i> About
             </a>
           </li>
@@ -42,7 +72,10 @@
             </a>
           </li>
         </ul>
-      </div>
+      </div> 
+      <div id="weatherContainer" class="d-flex justify-content-end">
+        <div id="weatherInfo" class="weather-info d-flex align-items-center"></div>
+    </div>     
     </div>
   </nav>
 
@@ -112,20 +145,6 @@
     </div>    
   </main>
 
-  <footer class="footer py-5">
-    <div class="container">
-      <div class="row">
-        <div class="col-8 mx-auto text-center mt-1">
-          <p class="mb-0 text-secondary">
-            Copyright © <script>
-              document.write(new Date().getFullYear())
-            </script> Soft by FSAC.
-          </p>
-        </div>
-      </div>
-    </div>
-  </footer>
-
   <script src="/assets/js/core/popper.min.js"></script>
   <script src="/assets/js/core/bootstrap.min.js"></script>
   <script src="/assets/js/plugins/perfect-scrollbar.min.js"></script>
@@ -139,6 +158,93 @@
       Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
     }
   </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', (event) => {
+        const weatherInfo = document.getElementById('weatherInfo');
+        
+        // Function to get weather data
+        async function getWeather(lat, lon) {
+          const apiKey = '8c524806e7b98e2a8f893b4b0055a2c8';  // Replace with your OpenWeatherMap API key
+          const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
+          
+          try {
+            const response = await fetch(url);
+            if (!response.ok) {
+              throw new Error('Network response was not ok');
+            }
+            const data = await response.json();
+            displayWeather(data);
+          } catch (error) {
+            weatherInfo.innerHTML = 'Unable to retrieve weather data';
+            console.error('There has been a problem with your fetch operation:', error);
+          }
+        }
+        
+        // Function to display weather data
+        function displayWeather(data) {
+          const { name, main, weather } = data;
+          const weatherIcon = getWeatherIcon(weather[0].icon);
+          weatherInfo.innerHTML = `
+            <i class="material-icons">location_on</i>
+            <h4>${name}</h4>
+            ${weatherIcon}
+            <p>${weather[0].description}</p>
+            <i class="material-icons">thermostat</i>
+            <p>${main.temp} °C</p>
+            <i class="material-icons">water_drop</i>
+            <p>${main.humidity}%</p>
+          `;
+        }
+    
+        // Function to get weather icon based on weather condition code
+        function getWeatherIcon(iconCode) {
+          // Map weather condition codes to corresponding Google Material icons
+          const iconMap = {
+            '01d': '<i class="material-icons">wb_sunny</i>',  // clear sky day
+            '01n': '<i class="material-icons">nights_stay</i>',  // clear sky night
+            '02d': '<i class="material-icons">cloud_queue</i>',  // few clouds day
+            '02n': '<i class="material-icons">cloud</i>',  // few clouds night
+            '03d': '<i class="material-icons">cloud</i>',  // scattered clouds day
+            '03n': '<i class="material-icons">cloud</i>',  // scattered clouds night
+            '04d': '<i class="material-icons">cloud</i>',  // broken clouds day
+            '04n': '<i class="material-icons">cloud</i>',  // broken clouds night
+            '09d': '<i class="material-icons">showers</i>',  // shower rain day
+            '09n': '<i class="material-icons">showers</i>',  // shower rain night
+            '10d': '<i class="material-icons">rainy</i>',  // rain day
+            '10n': '<i class="material-icons">rainy</i>',  // rain night
+            '11d': '<i class="material-icons">thunderstorm</i>',  // thunderstorm day
+            '11n': '<i class="material-icons">thunderstorm</i>',  // thunderstorm night
+            '13d': '<i class="material-icons">ac_unit</i>',  // snow day
+            '13n': '<i class="material-icons">ac_unit</i>',  // snow night
+            '50d': '<i class="material-icons">opacity</i>',  // mist day
+            '50n': '<i class="material-icons">opacity</i>'   // mist night
+          };
+    
+          return iconMap[iconCode];
+        }
+        
+        // Get user's current location
+        function getLocation() {
+          if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(
+              (position) => {
+                const { latitude, longitude } = position.coords;
+                getWeather(latitude, longitude);
+              },
+              (error) => {
+                weatherInfo.innerHTML = 'Unable to retrieve your location';
+                console.error('Geolocation error:', error);
+              }
+            );
+          } else {
+            weatherInfo.innerHTML = 'Geolocation is not supported by this browser';
+          }
+        }
+        
+        // Fetch weather on page load
+        getLocation();
+      });
+    </script>
   <script async defer src="https://buttons.github.io/buttons.js"></script>
   <script src="/assets/js/argon-dashboard.min.js?v=2.0.4"></script>
 </body>

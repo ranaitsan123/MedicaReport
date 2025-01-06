@@ -11,22 +11,25 @@ app.register_blueprint(api_bp, url_prefix='/api')
 
 app.secret_key = 'Reçport_ç_2025&app'  # Used for flashing messages
 
-# Route for login page
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
-        email = request.form['email']  # This should match the input name attribute
+        email = request.form['email']
         password = request.form['password']
 
-        # Check if the credentials are correct
-        if authenticate(email, password):  # Use email for authentication
-            session['user_email'] = email  # Store the email in the session, not username
-            return redirect(url_for('dashboard'))
+        # Authenticate user and retrieve full user data
+        user = authenticate(email, password)  # Authenticate using email and password
+        
+        if user:
+            # Store email and username in session
+            session['user_email'] = email
+            session['user_name'] = user['username']  # Store the username in the session
+            return redirect(url_for('dashboard', user_name=user['user_name']))  # Redirect to dashboard
         else:
-            flash('Invalid email or password', 'error')  # Error message for email or password mismatch
+            flash('Invalid email or password', 'error')
             return redirect(url_for('login'))  # Redirect back to login page with error message
 
-    return render_template('login.html')  # Render the login page on GET request
+    return render_template('login.html')
 
 # Route for sign-up page
 @app.route('/signup', methods=['GET', 'POST'])
@@ -56,7 +59,7 @@ def signup():
 
     return render_template('signup.html')
 
-# Route for dashboard page
+# Route for dashboard
 @app.route('/dashboard')
 def dashboard():
     if 'user_email' not in session:
@@ -64,7 +67,9 @@ def dashboard():
         return redirect(url_for('login'))
     
     user_email = session['user_email']
-    return render_template('dashboard.html', user_email=user_email)
+    user_name = session.get('user_name', 'Guest')  # Retrieve the username from the session
+    
+    return render_template('dashboard.html', user_email=user_email, user_name=user_name)
 
 # Route for logout
 @app.route('/logout')
@@ -200,6 +205,11 @@ def generate_pdf(patient_id):
         
     # Redirect to the API endpoint for PDF generation
     return redirect(f'/api/generate_pdf/{patient_id}')
+
+@app.route('/about')
+def about():
+    # Render the about.html page
+    return render_template('about.html')
 
 if __name__ == '__main__':
     app.run(debug=True)

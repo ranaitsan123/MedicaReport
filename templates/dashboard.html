@@ -6,7 +6,7 @@
   <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/apple-icon.png">
   <link rel="icon" type="image/png" href="/assets/img/favicon.png">
   <title>
-    TawarAI - dashboard
+    MedicaReport - dashboard
   </title>
   <!--     Fonts and icons     -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
@@ -58,7 +58,7 @@
       <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
       <a class="navbar-brand m-0" href=" https://demos.creative-tim.com/argon-dashboard/pages/dashboard.html " target="_blank">
         <img src="/assets/img/logos/vulneraScan_logo.png" class="navbar-brand-img h-100" alt="main_logo">
-        <span class="ms-1 font-weight-bold">TawarAI</span>
+        <span class="ms-1 font-weight-bold">MedicaReport</span>
       </a>
     </div>
     <hr class="horizontal dark mt-0">
@@ -171,7 +171,7 @@
          <div class="col-lg-7 mb-lg-4 mb-4">
              <div class="card z-index-2 h-100"> <!-- style="background-color: #f4f4f4;" -->
                  <div class="card-header pb-0 pt-3 bg-transparent">
-                     <h4 id="greeting"><b>Hello {{ user_name }}.</b></h4><h5>Que faisons nous aujourd'hui?</h5>
+                     <h4 id="greeting"><b>Hello {{ user_email }}.</b></h4><h5>Que faisons nous aujourd'hui?</h5>
                  </div>
                  <div class="d-flex justify-content-center align-items-center" id="iframe_div">
                      <div id="iframe-container" style="display: none;">
@@ -197,8 +197,8 @@
                     <div class="icon icon-shape icon-sm bg-white text-center border-radius-md mb-3">
                       <i class="ni ni-camera-compact text-dark opacity-10"></i>
                     </div>
-                    <h5 class="text-white mb-1">Découvrez VulneraScan</h5>
-                    <p>Un pas vers la sécurité digitale. VulneraScan, votre allié contre les menaces en ligne.</p>
+                    <h5 class="text-white mb-1">Efficacité avec l'IA</h5>
+                    <p>Génération de rapports rapides et précis grâce à l'IA.</p>
                   </div>
                 </div>
                 <!-- SECOND FLIPCARD -->
@@ -208,8 +208,8 @@
                     <div class="icon icon-shape icon-sm bg-white text-center border-radius-md mb-3">
                       <i class="ni ni-bulb-61 text-dark opacity-10"></i>
                     </div>
-                    <h5 class="text-white mb-1">Une façon plus rapide de créer des pages web</h5>
-                    <p>Avec VulneraScan, la sécurité web en un clin d'œil. Accélérez vers la maîtrise.</p>
+                    <h5 class="text-white mb-1">Interface Simple</h5>
+                    <p>Facile à utiliser sans compétences techniques.</p>
                   </div>
                 </div>
                 <!-- THIRD FLIPCARD -->
@@ -219,8 +219,8 @@
                     <div class="icon icon-shape icon-sm bg-white text-center border-radius-md mb-3">
                       <i class="ni ni-trophy text-dark opacity-10"></i>
                     </div>
-                    <h5 class="text-white mb-1">Relevez le défi!</h5>
-                    <p>Avec VulneraScan, chaque obstacle est une opportunité. Conquérez la toile avec confiance.</p>
+                    <h5 class="text-white mb-1">Sécurité Maximale</h5>
+                    <p>Conformité HIPAA pour garantir la confidentialité des données.</p>
                   </div>
                 </div>
               </div>
@@ -252,7 +252,7 @@
     <div class="card shadow-lg">
       <div class="card-header pb-0 pt-3 ">
         <div class="float-start">
-          <h5 class="mt-3 mb-0">VulneraScan</h5>
+          <h5 class="mt-3 mb-0">MedicaReport</h5>
           <p>Consultez nos options de tableau de bord.</p>
         </div>
         <div class="float-end mt-4">
@@ -340,93 +340,91 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
 
   <script>
-  document.addEventListener('DOMContentLoaded', (event) => {
-    const weatherInfo = document.getElementById('weatherInfo');
-    
-    // Function to get weather data
-    async function getWeather(lat, lon) {
-      const apiKey = '8c524806e7b98e2a8f893b4b0055a2c8';  // Replace with your OpenWeatherMap API key
-      const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
+    document.addEventListener('DOMContentLoaded', (event) => {
+      const weatherInfo = document.getElementById('weatherInfo');
       
-      try {
-        const response = await fetch(url);
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
+      // Function to get weather data
+      async function getWeather(lat, lon) {
+        const apiKey = '8c524806e7b98e2a8f893b4b0055a2c8';  // Replace with your OpenWeatherMap API key
+        const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
+        
+        try {
+          const response = await fetch(url);
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          const data = await response.json();
+          displayWeather(data);
+        } catch (error) {
+          weatherInfo.innerHTML = 'Unable to retrieve weather data';
+          console.error('There has been a problem with your fetch operation:', error);
         }
-        const data = await response.json();
-        displayWeather(data);
-      } catch (error) {
-        weatherInfo.innerHTML = 'Unable to retrieve weather data';
-        console.error('There has been a problem with your fetch operation:', error);
       }
-    }
-    
-    // Function to display weather data
-    function displayWeather(data) {
+      
+      // Function to display weather data
+      function displayWeather(data) {
       const { name, main, weather } = data;
       const weatherIcon = getWeatherIcon(weather[0].icon);
       weatherInfo.innerHTML = `
-        <i class="fas fa-map-marker-alt"></i>
-        <h4>${name}</h4>
-        ${weatherIcon}
-        <p>${weather[0].description}</p>
-        <i class="fas fa-thermometer-half"></i>
-        <p>${main.temp} °C</p>
-        <i class="fas fa-tint"></i>
-        <p>${main.humidity}%</p>
+          <i class="material-icons">location_on</i>
+          <h4>${name}</h4>
+          ${weatherIcon}
+          <p>${weather[0].description}</p>
+          <i class="material-icons">thermostat</i>
+          <p>${main.temp} °C</p>
+          <i class="material-icons">water_drop</i>
+          <p>${main.humidity}%</p>
       `;
-    }
-
-    // Function to get weather icon based on weather condition code
-    function getWeatherIcon(iconCode) {
-      // Map weather condition codes to corresponding Font Awesome icons
-      const iconMap = {
-        '01d': '<i class="fas fa-sun"></i>',  // clear sky day
-        '01n': '<i class="fas fa-moon"></i>',  // clear sky night
-        '02d': '<i class="fas fa-cloud-sun"></i>',  // few clouds day
-        '02n': '<i class="fas fa-cloud-moon"></i>',  // few clouds night
-        '03d': '<i class="fas fa-cloud"></i>',  // scattered clouds day
-        '03n': '<i class="fas fa-cloud"></i>',  // scattered clouds night
-        '04d': '<i class="fas fa-cloud"></i>',  // broken clouds day
-        '04n': '<i class="fas fa-cloud"></i>',  // broken clouds night
-        '09d': '<i class="fas fa-cloud-showers-heavy"></i>',  // shower rain day
-        '09n': '<i class="fas fa-cloud-showers-heavy"></i>',  // shower rain night
-        '10d': '<i class="fas fa-cloud-sun-rain"></i>',  // rain day
-        '10n': '<i class="fas fa-cloud-moon-rain"></i>',  // rain night
-        '11d': '<i class="fas fa-bolt"></i>',  // thunderstorm day
-        '11n': '<i class="fas fa-bolt"></i>',  // thunderstorm night
-        '13d': '<i class="fas fa-snowflake"></i>',  // snow day
-        '13n': '<i class="fas fa-snowflake"></i>',  // snow night
-        '50d': '<i class="fas fa-smog"></i>',  // mist day
-        '50n': '<i class="fas fa-smog"></i>'   // mist night
-      };
-      return iconMap[iconCode];
-    }
-
-    // Get user's current location
-    function getLocation() {
-      if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(
-          (position) => {
-            const { latitude, longitude } = position.coords;
-            getWeather(latitude, longitude);
-          },
-          (error) => {
-            weatherInfo.innerHTML = 'Unable to retrieve your location';
-            console.error('Geolocation error:', error);
-          }
-        );
-      } else {
-        weatherInfo.innerHTML = 'Geolocation is not supported by this browser';
+  }
+  
+      // Function to get weather icon based on weather condition code
+      function getWeatherIcon(iconCode) {
+        // Map weather condition codes to corresponding Font Awesome icons
+        const iconMap = {
+          '01d': '<i class="material-icons">wb_sunny</i>',  // clear sky day
+  '01n': '<i class="material-icons">nights_stay</i>',  // clear sky night
+  '02d': '<i class="material-icons">cloud_queue</i>',  // few clouds day
+  '02n': '<i class="material-icons">cloud</i>',  // few clouds night
+  '03d': '<i class="material-icons">cloud</i>',  // scattered clouds day
+  '03n': '<i class="material-icons">cloud</i>',  // scattered clouds night
+  '04d': '<i class="material-icons">cloud</i>',  // broken clouds day
+  '04n': '<i class="material-icons">cloud</i>',  // broken clouds night
+  '09d': '<i class="material-icons">grain</i>',  // shower rain day
+  '09n': '<i class="material-icons">grain</i>',  // shower rain night
+  '10d': '<i class="material-icons">cloud_done</i>',  // rain day
+  '10n': '<i class="material-icons">cloud_off</i>',  // rain night
+  '11d': '<i class="material-icons">flash_on</i>',  // thunderstorm day
+  '11n': '<i class="material-icons">flash_on</i>',  // thunderstorm night
+  '13d': '<i class="material-icons">ac_unit</i>',  // snow day
+  '13n': '<i class="material-icons">ac_unit</i>',  // snow night
+  '50d': '<i class="material-icons">filter_drama</i>',  // mist day
+  '50n': '<i class="material-icons">filter_drama</i>'   // mist night
+        };
+        return iconMap[iconCode];
       }
-    }
-
-    // Fetch weather on page load
-    getLocation();
-  });
-</script>
-
-
+  
+      // Get user's current location
+      function getLocation() {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(
+            (position) => {
+              const { latitude, longitude } = position.coords;
+              getWeather(latitude, longitude);
+            },
+            (error) => {
+              weatherInfo.innerHTML = 'Unable to retrieve your location';
+              console.error('Geolocation error:', error);
+            }
+          );
+        } else {
+          weatherInfo.innerHTML = 'Geolocation is not supported by this browser';
+        }
+      }
+  
+      // Fetch weather on page load
+      getLocation();
+    });
+  </script>
 </body>
 
 </html>

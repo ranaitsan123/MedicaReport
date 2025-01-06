@@ -12,20 +12,26 @@
   <link href="/assets/css/nucleo-svg.css" rel="stylesheet" />
   <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
   <link href="/assets/css/argon-dashboard.css?v=2.0.4" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
   <style>
       #weatherContainer {
-        background-color: rgba(255, 255, 255, 0.1);
+        background-color: rgba(255, 255, 255, 0);
         border-radius: 10px;
         padding: 10px 20px;
         display: flex;
         align-items: center;
-        color: black;
+        justify-content: flex-start;  /* Ensures items are aligned in a row */
+        color: rgba(0, 0, 0, 0.626);
+        white-space: nowrap; /* Prevents wrapping */
+        overflow: hidden; /* Keeps the content in one line */
       }
 
       .weather-info {
         display: flex;
-        gap: 15px;  /* Adjust the space between items as needed */
+        gap: 10px;  /* Adjust the space between items as needed */
         align-items: center;
+        flex-wrap: nowrap; /* Prevents wrapping */
       }
 
       .weather-info h4,
@@ -55,8 +61,27 @@
           <div class="container-fluid">
             <a class="navbar-brand font-weight-bolder ms-lg-0 ms-3" href="javascript:;">
               <img src="/assets/img/logos/vulneraScan_logo.png" class="navbar-brand-img h-100" alt="main_logo" style="max-height: 40px;">
-              TawarAI
+              MedicaReport
             </a>
+          </div>
+          <div class="collapse navbar-collapse" id="navigation">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item">
+                <a class="nav-link d-flex align-items-center me-2 active" aria-current="page" href="javascript:;">
+                    <i class="fa fa-home opacity-6  me-1"></i> Home
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link d-flex align-items-center me-2 active" aria-current="page" href="/about">
+                    <i class="fa fa-info-circle opacity-6  me-1"></i> About
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link d-flex align-items-center me-2 active" aria-current="page" href="../documentation.html">
+                    <i class="fa fa-book opacity-6  me-1"></i> Documentation
+                </a>
+              </li>
+            </ul>
           </div>
           <div class="container-fluid">
             <div id="weatherContainer">
@@ -159,44 +184,45 @@
       function displayWeather(data) {
         const { name, main, weather } = data;
         const weatherIcon = getWeatherIcon(weather[0].icon);
-        weatherInfo.innerHTML = `
-          <i class="fas fa-map-marker-alt"></i>
+        weatherInfo.innerHTML = ` 
+          <i class="material-icons">location_on</i>
           <h4>${name}</h4>
           ${weatherIcon}
           <p>${weather[0].description}</p>
-          <i class="fas fa-thermometer-half"></i>
+          <i class="material-icons">thermostat</i>
           <p>${main.temp} °C</p>
-          <i class="fas fa-tint"></i>
+          <i class="material-icons">water_drop</i>
           <p>${main.humidity}%</p>
         `;
       }
   
       // Function to get weather icon based on weather condition code
       function getWeatherIcon(iconCode) {
-        // Map weather condition codes to corresponding Font Awesome icons
+        // Map weather condition codes to corresponding Google Material icons
         const iconMap = {
-          '01d': '<i class="fas fa-sun"></i>',  // clear sky day
-          '01n': '<i class="fas fa-moon"></i>',  // clear sky night
-          '02d': '<i class="fas fa-cloud-sun"></i>',  // few clouds day
-          '02n': '<i class="fas fa-cloud-moon"></i>',  // few clouds night
-          '03d': '<i class="fas fa-cloud"></i>',  // scattered clouds day
-          '03n': '<i class="fas fa-cloud"></i>',  // scattered clouds night
-          '04d': '<i class="fas fa-cloud"></i>',  // broken clouds day
-          '04n': '<i class="fas fa-cloud"></i>',  // broken clouds night
-          '09d': '<i class="fas fa-cloud-showers-heavy"></i>',  // shower rain day
-          '09n': '<i class="fas fa-cloud-showers-heavy"></i>',  // shower rain night
-          '10d': '<i class="fas fa-cloud-sun-rain"></i>',  // rain day
-          '10n': '<i class="fas fa-cloud-moon-rain"></i>',  // rain night
-          '11d': '<i class="fas fa-bolt"></i>',  // thunderstorm day
-          '11n': '<i class="fas fa-bolt"></i>',  // thunderstorm night
-          '13d': '<i class="fas fa-snowflake"></i>',  // snow day
-          '13n': '<i class="fas fa-snowflake"></i>',  // snow night
-          '50d': '<i class="fas fa-smog"></i>',  // mist day
-          '50n': '<i class="fas fa-smog"></i>'   // mist night
+          '01d': '<i class="material-icons">wb_sunny</i>',  // clear sky day
+          '01n': '<i class="material-icons">nights_stay</i>',  // clear sky night
+          '02d': '<i class="material-icons">cloud_queue</i>',  // few clouds day
+          '02n': '<i class="material-icons">cloud</i>',  // few clouds night
+          '03d': '<i class="material-icons">cloud</i>',  // scattered clouds day
+          '03n': '<i class="material-icons">cloud</i>',  // scattered clouds night
+          '04d': '<i class="material-icons">cloud</i>',  // broken clouds day
+          '04n': '<i class="material-icons">cloud</i>',  // broken clouds night
+          '09d': '<i class="material-icons">showers</i>',  // shower rain day
+          '09n': '<i class="material-icons">showers</i>',  // shower rain night
+          '10d': '<i class="material-icons">rainy</i>',  // rain day
+          '10n': '<i class="material-icons">rainy</i>',  // rain night
+          '11d': '<i class="material-icons">thunderstorm</i>',  // thunderstorm day
+          '11n': '<i class="material-icons">thunderstorm</i>',  // thunderstorm night
+          '13d': '<i class="material-icons">ac_unit</i>',  // snow day
+          '13n': '<i class="material-icons">ac_unit</i>',  // snow night
+          '50d': '<i class="material-icons">opacity</i>',  // mist day
+          '50n': '<i class="material-icons">opacity</i>'   // mist night
         };
+  
         return iconMap[iconCode];
       }
-  
+      
       // Get user's current location
       function getLocation() {
         if (navigator.geolocation) {
@@ -214,11 +240,10 @@
           weatherInfo.innerHTML = 'Geolocation is not supported by this browser';
         }
       }
-  
+      
       // Fetch weather on page load
       getLocation();
     });
   </script>
-  
 </body>
 </html>

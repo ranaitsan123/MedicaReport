@@ -1,4 +1,3 @@
-# auth.py
 import json
 import os
 
@@ -20,24 +19,24 @@ def save_users(users):
     with open('users.json', 'w') as file:
         json.dump(users, file, indent=4)  # Add indent for better readability
 
-# Authenticate user
+# Authenticate user (now returns user data)
 def authenticate(email, password):
     users = load_users()
     for user in users:
         if user['email'] == email and user['password'] == password:
-            return True
-    return False
+            return user  # Return the user data (including username)
+    return None  # Return None if authentication fails
 
 # Register user (Sign Up)
 def register(username, password, email):
     users = load_users()
 
-    # Check if the username already exists
+    # Check if the email already exists (since emails should be unique)
     for user in users:
-        if user['username'] == username:
-            return False  # Username already exists, so registration fails
+        if user['email'] == email:
+            return False  # Email already exists, so registration fails
     
-    # If the username doesn't exist, create a new user
+    # If the email doesn't exist, create a new user with the username
     users.append({'username': username, 'password': password, 'email': email})
     save_users(users)
     return True
