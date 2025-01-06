@@ -18,31 +18,26 @@ and navigate to http://127.0.0.1:5000/ to see it live. to explore the web app
 
 # Project Structure
 
-generate-medical-report
-├── model_assets
-
-│   ├── model.pkl
-
-│   └── vectorizer.pkl
-
+generate-medical-report 
 ├── model_dev
 │   ├── data
-│   |   └── data.json
-│   └── model_dev.ipynb
+│   │   └── data.json            # Sample data used for development
+│   └── model_dev.ipynb          # Jupyter notebook for model development
 ├── templates
-│   └── index.html 
+│   └── index.html               # Main HTML template for the web interface
 ├── assets
-│   ── css
-│   ── fonts
-│   ── img
-│   ── js
-│   ── scss
-├── app.py
-├── api.py
-├── auth.py
-├── pdf_generator.py
-├── report_generator.py
-├── data.zip
-├── users.json
-├── requirements.txt
-└── README.md
+│   ├── css                      # CSS files for styling
+│   ├── fonts                    # Font files used in the app
+│   ├── img                      # Image assets for the app
+│   ├── js                       # JavaScript files for frontend functionality
+│   └── scss                     # SCSS files for custom styles
+├── app.py                        # Main application file
+├── api.py                        # API routes for interaction
+├── auth.py                       # Authentication related functions
+├── pdf_generator.py              # PDF report generation logic
+├── report_generator.py           # Logic to generate medical reports
+├── data.zip                      # Compressed data file used by the app
+├── users.json                    # User data in JSON format
+├── requirements.txt              # Python dependencies for the project
+└── README.md                     # Project documentation
+
