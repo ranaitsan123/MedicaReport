@@ -24,7 +24,7 @@ def login():
             # Store email and username in session
             session['user_email'] = email
             session['user_name'] = user['username']  # Store the username in the session
-            return redirect(url_for('dashboard', user_name=user['user_name']))  # Redirect to dashboard
+            return redirect(url_for('dashboard'))  # Redirect to dashboard
         else:
             flash('Invalid email or password', 'error')
             return redirect(url_for('login'))  # Redirect back to login page with error message
