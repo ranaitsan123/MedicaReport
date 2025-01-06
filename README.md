@@ -25,6 +25,9 @@ generate-medical-report
 │   └── model_dev.ipynb          # Jupyter notebook for model development
 ├── templates
 │   └── index.html               # Main HTML template for the web interface
+│   └── login.html               # Main HTML template for the web login
+│   └── dashborad.html           # Main HTML template for the web dashborad
+│   └── signup.html              # Main HTML template for the web signup
 ├── assets
 │   ├── css                      # CSS files for styling
 │   ├── fonts                    # Font files used in the app
@@ -40,4 +43,3 @@ generate-medical-report
 ├── users.json                    # User data in JSON format
 ├── requirements.txt              # Python dependencies for the project
 └── README.md                     # Project documentation
-
