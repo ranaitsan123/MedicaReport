@@ -19,7 +19,28 @@ and navigate to http://127.0.0.1:5000/ to see it live. to explore the web app
 # Project Structure
  
 ## generate-medical-report
- 
+argon-dashboard
+  ├── assets
+  │   ├── css
+  │   ├── fonts
+  │   ├── img
+  │   ├── js
+  │   │   ├── core
+  │   │   ├── plugins
+  │   │   └── argon-dashboard.js
+  │   │   └── argon-dashboard.js.map
+  │   │   └── argon-dashboard.min.js
+  │   └── scss
+  │       ├── argon-dashboard
+  │       └── argon-dashboard.scss
+  ├── docs
+  │   ├── documentation.html
+  ├── pages
+  ├── CHANGELOG.md
+  ├── gulpfile.js
+  ├── package.json
+
+  
 ├── model_dev
 │   ├── data
 │   │   └── data.json         # Sample data used for development
