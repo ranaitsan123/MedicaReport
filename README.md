@@ -9,7 +9,7 @@ source venv/bin/activate
 While in the virtual environment, install required dependencies from requirements.txt.
 
 ## Install requirements
-pip install -r ./requirements.txt
+pip install -r ./requirements.txt  
 
 ## Run the app
 python app.py
@@ -25,6 +25,7 @@ generate-medical-report
 │   └── model_dev.ipynb          # Jupyter notebook for model development
 ├── templates
 │   └── index.html               # Main HTML template for the web interface
+│   └── reports.html             # Main HTML template for the web reports
 │   └── login.html               # Main HTML template for the web login
 │   └── dashborad.html           # Main HTML template for the web dashborad
 │   └── signup.html              # Main HTML template for the web signup
