@@ -1,6 +1,6 @@
 # [MedicaReport](https://medica-report.framer.website/)
 
-![version](https://img.shields.io/badge/version-2.1.0-blue.svg) [![GitHub issues open](https://img.shields.io/github/issues/creativetimofficial/argon-dashboard.svg)](https://github.com/creativetimofficial/argon-dashboard/issues?q=is%3Aopen+is%3Aissue) [![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/creativetimofficial/argon-dashboard.svg)](https://github.com/creativetimofficial/argon-dashboard/issues?q=is%3Aissue+is%3Aclosed)
+![version](https://img.shields.io/badge/version-2.1.0-blue.svg)
 
 ![Image](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard/argon-dashboard-2.jpg)
 
