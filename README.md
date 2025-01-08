@@ -54,13 +54,15 @@ View <a href="https://demos.creative-tim.com/argon-dashboard/pages/dashboard.htm
 | ![Reports page](https://github.com/user-attachments/assets/e1b710b4-ba85-4893-8e58-6bbb794a3e6b) | [![About page](https://github.com/user-attachments/assets/37ac89ec-d474-46f6-9cfe-6dab80e4450f)](https://github.com/user-attachments/assets/3a8ff9c0-170a-45c8-8bc1-c4786564dc22) | [![Home page](https://github.com/user-attachments/assets/f132341a-bd92-4c1d-ae93-27ea977d823f)](https://medica-report.framer.website/)|
 
 ## Prerequisites
+
 Before you start, ensure that you have the following installed on your machine:
 
-Python 3.7+ (For running the app backend)
-pip (Python package installer)
-Git (To clone the repository)
-A Groq API key (For processing medical data and generating reports)
-A web browser (For accessing the web interface)
+- Python 3.7+ (For running the app backend)
+- pip (Python package installer)
+- Git (To clone the repository)
+- A Groq API key (For processing medical data and generating reports)
+- A web browser (For accessing the web interface)
+
 You will also need a local environment setup (virtual environment recommended) for running the Python-based web application.
 
 ## Download and Installation
