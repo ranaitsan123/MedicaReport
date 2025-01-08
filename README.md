@@ -221,11 +221,11 @@ Please ensure that your code follows the existing style and includes tests if ap
 
 ## Resources
 
-- Demo: <https://demos.creative-tim.com/argon-dashboard>
-- Documentation: <https://www.creative-tim.com/learning-lab/bootstrap/overview/argon-dashboard>
-- License Agreement: <https://www.creative-tim.com/license>
-- Support: <https://www.creative-tim.com/contact-us>
-- Issues: [Github Issues Page](https://github.com/creativetimofficial/argon-dashboard/issues)
+- Demo Video: <https://demos.creative-tim.com/argon-dashboard>
+- Documentation Boostrap Tempaltes: <https://www.creative-tim.com/learning-lab/bootstrap/overview/argon-dashboard>
+- MedicaReport Home Page: <https://medica-report.framer.website/>
+- Support: <https://www.linkedin.com/in/aicha-lahnite/>
+- Issues: [Github Issues Page](https://github.com/MarwaneMLE/generate-medical-report/issues)
 
 ## Help Us Fix Bugs!
 
@@ -243,29 +243,12 @@ Your contributions help make MedicaReport better for everyone — thank you for 
 
 - Copyright &copy; 2025 Aicha Lahnite [Aicha Lahnite](https://www.linkedin.com/in/aicha-lahnite/)
 
-## Useful Links
-
-- [Tutorials](https://www.youtube.com/channel/UCVyTG4sCw-rOvB9oHkzZD1w)
-- [Affiliate Program](https://www.creative-tim.com/affiliates/new?ref=mk-github-readme) (earn money)
-- [Blog Creative Tim](http://blog.creative-tim.com/)
-- [Free Products](https://www.creative-tim.com/bootstrap-themes/free?ref=mk-github-readme) from Creative Tim
-- [Premium Products](https://www.creative-tim.com/bootstrap-themes/premium?ref=mk-github-readme) from Creative Tim
-- [React Products](https://www.creative-tim.com/bootstrap-themes/react-themes?ref=mk-github-readme) from Creative Tim
-- [Angular Products](https://www.creative-tim.com/bootstrap-themes/angular-themes?ref=mk-github-readme) from Creative Tim
-- [VueJS Products](https://www.creative-tim.com/bootstrap-themes/vuejs-themes?ref=mk-github-readme) from Creative Tim
-- [More products](https://www.creative-tim.com/bootstrap-themes?ref=mk-github-readme) from Creative Tim
-- [Argon Design](https://www.creative-tim.com/design-system/argon)
-- Check our Bundles [here](https://www.creative-tim.com/bundles?ref=mk-github-readme)
-- [Get Discount](https://www.creative-tim.com/coupon)
-
 ## Social Media
 
 Linkedin: [Aicha Lahnite](https://www.linkedin.com/in/aicha-lahnite/) | [Marwan](https://www.linkedin.com/in/marwane-khadrouf-785636141/)
 
-Email: [Aicha Lahnite](halaicha300@gmail.com) | [Marwan](khmarwane10@gmail.com)
+Email: halaicha300@gmail.com | khmarwane10@gmail.com
 
-Dribbble: <https://dribbble.com/creativetim>
+Discord: aicha_a1000<halaicha300@gmail.com>
 
-TikTok: <https://tiktok.com/@creative.tim>
-
-Instagram: <https://instagram.com/creativetimofficial>
+Github: [Aicha Lahnite](https://github.com/ranaitsan123) | [Marwan](https://github.com/MarwaneMLE)
