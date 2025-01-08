@@ -194,11 +194,11 @@ At present, we officially aim to support the last two versions of the following 
 
 We welcome contributions to improve MedicaReport. If you'd like to contribute, please follow these steps:
 
-1- Fork the repository.
-2- Create a new branch.
-3- Make your changes.
-4- Commit your changes.
-5- pen a pull request.
+1. Fork the repository.
+2. Create a new branch.
+3. Make your changes.
+4. Commit your changes.
+5. pen a pull request.
 
 Please ensure that your code follows the existing style and includes tests if applicable.
 
