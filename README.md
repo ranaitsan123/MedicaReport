@@ -245,7 +245,7 @@ Your contributions help make MedicaReport better for everyone — thank you for 
 
 ## Social Media
 
-Linkedin: [Aicha Lahnite](https://www.linkedin.com/in/aicha-lahnite/) | [Marwan Khadrouf](https://www.linkedin.com/in/marwane-khadrouf-785636141/)
+Linkedin: [Aicha Lahnite](https://www.linkedin.com/in/aicha-lahnite/) | [Marwane Khadrouf](https://www.linkedin.com/in/marwane-khadrouf-785636141/)
 
 Email: halaicha300@gmail.com | khmarwane10@gmail.com
 
