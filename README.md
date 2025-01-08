@@ -206,6 +206,64 @@ At present, we officially aim to support the last two versions of the following 
 
 <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/chrome.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/firefox.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/edge.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/safari.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/opera.png" width="64" height="64">
 
+## Technologies Used
+
+MedicaReport is built using a variety of programming languages and libraries. Here's a quick overview of the main technologies used in the project, along with their official documentation:
+
+**1. Python 🐍**
+
+[Official Documentation](https://docs.python.org/3/)
+
+Python is the main programming language used to build the backend of MedicaReport, handling everything from API logic to data processing.
+
+**2. Flask 🖥️**
+
+[Official Documentation](https://flask.palletsprojects.com/en/stable/)
+
+Flask is used as the web framework for the MedicaReport backend, handling routing, templating, and HTTP request management.
+
+**3. HTML 🌐**
+
+[Official Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML)
+
+HTML is used to structure the front-end of the web application and display the reports and user interface.
+
+**4. CSS 🎨**
+
+[Official Documentation](https://developer.mozilla.org/en-US/docs/Web/CSS)
+
+CSS is used to style and design the front-end of MedicaReport, ensuring the web app has a modern and responsive layout.
+
+**5. JavaScript 💻**
+
+[Official Documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+
+JavaScript is used to implement interactive elements and client-side functionalities on the front-end.
+
+**6. JSON 📄**
+
+[Official Documentation](https://www.json.org/json-en.html)
+
+JSON (JavaScript Object Notation) is used for storing and transferring patient data and other application-related information in MedicaReport.
+
+<!-- Python -->
+<img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" width="64" height="64"> [Python](https://docs.python.org/3/)
+
+<!-- Flask -->
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/67/Flask_logo.svg" width="64" height="64"> [Flask](https://flask.palletsprojects.com/)
+
+<!-- HTML -->
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/HTML5_logo_and_wordmark.svg" width="64" height="64"> [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+
+<!-- CSS -->
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg" width="64" height="64"> [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+
+<!-- JavaScript -->
+<img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg" width="64" height="64"> [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+
+<!-- JSON -->
+<img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/JSON_vector_logo.svg" width="64" height="64"> [JSON](https://www.json.org/json-en.html)
+
 ## Contributing
 
 We welcome contributions to improve MedicaReport. If you'd like to contribute, please follow these steps:
