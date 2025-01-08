@@ -1,4 +1,4 @@
-# [MedicaReport Web Application](https://medica-report.framer.website/)
+# [MedicaReport](https://medica-report.framer.website/)
 
 ![version](https://img.shields.io/badge/version-2.1.0-blue.svg)
 
