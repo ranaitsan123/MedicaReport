@@ -65,13 +65,6 @@ View <a href="https://demos.creative-tim.com/argon-dashboard/pages/dashboard.htm
 
 ## Demo
 
-- [Dashboard page](https://demos.creative-tim.com/argon-dashboard/pages/dashboard)
-- [User profile page](https://demos.creative-tim.com/argon-dashboard/pages/profile)
-- [Tables page ](https://demos.creative-tim.com/argon-dashboard/pages/tables)
-- [RTL Page](https://demos.creative-tim.com/argon-dashboard/pages/rtl)
-- [Sign Up page](https://demos.creative-tim.com/argon-dashboard/pages/sign-up)
-- [Login page](https://demos.creative-tim.com/argon-dashboard/pages/sign-in)
-
 | Dashboard page                                                                                                                                                                                | Login page                                                                                                                                                                                 | Signup page                                                                                                                                                                                |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | ![Dashboard page](https://github.com/user-attachments/assets/eb19ad43-7c93-4896-8a70-ba2997198a17) | ![Login page](https://github.com/user-attachments/assets/87f8b22a-1ba3-43b8-bafc-3cef54b0bbcb) | ![Signup page](https://github.com/user-attachments/assets/759ca996-aa60-49c3-a35d-62ca895ae3ee) |
