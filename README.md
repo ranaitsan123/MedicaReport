@@ -68,6 +68,13 @@ You will also need a local environment setup (virtual environment recommended) f
 ## Download and Installation
 
 **Step 1: Clone the Repository**
+Start by cloning the MedicaReport repository to your local machine:
+
+```bash
+Copier le code
+git clone https://github.com/your-username/MedicaReport.git
+cd MedicaReport
+```
 - [Download from Creative Tim](https://www.creative-tim.com/product/argon-dashboard)
 
 - Install with Npm: `npm i @creative-tim-official/argon-dashboard-free`
