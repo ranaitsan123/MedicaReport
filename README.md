@@ -2,7 +2,7 @@
 
 ![version](https://img.shields.io/badge/version-2.1.0-blue.svg)
 
-![Image](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard/argon-dashboard-2.jpg)
+![Image Preview](https://github.com/user-attachments/assets/41a9272f-e0bb-4b91-9e7d-b52c60dac72d)
 
 MedicaReport is a web app designed for doctors to access patient medical reports generated from ambulance datasets. The reports are made available to the doctors before the ambulance arrives at the hospital, so they can prepare for patient care in advance. The app also provides authentication and a dashboard for doctors to review, download, and analyze medical data.
 
