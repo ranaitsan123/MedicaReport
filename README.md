@@ -67,7 +67,7 @@ You will also need a local environment setup (virtual environment recommended) f
 
 ## Download and Installation
 
-- [Download from Github](https://github.com/creativetimofficial/argon-dashboard/archive/master.zip)
+**Step 1: Clone the Repository**
 - [Download from Creative Tim](https://www.creative-tim.com/product/argon-dashboard)
 
 - Install with Npm: `npm i @creative-tim-official/argon-dashboard-free`
