@@ -72,7 +72,7 @@ You will also need a local environment setup (virtual environment recommended) f
 Start by cloning the MedicaReport repository to your local machine:
 
 ```bash
-git clone https://github.com/your-username/MedicaReport.git
+git clone https://github.com/MarwaneMLE/MedicaReport.git
 cd MedicaReport
 ```
 - [Download from Creative Tim](https://www.creative-tim.com/product/argon-dashboard)
