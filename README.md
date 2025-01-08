@@ -189,15 +189,15 @@ On the reports page, doctors can:
 
 MedicaReport is highly customizable, and you can enhance its functionality with the following features:
 
--**JWT Authentication:** Implement JSON Web Tokens (JWT) for stateless authentication, improving security and scalability by eliminating the need for server-side session storage.
+- **JWT Authentication:** Implement JSON Web Tokens (JWT) for stateless authentication, improving security and scalability by eliminating the need for server-side session storage.
 
--**Enhanced PDF Generation with ML:** Use machine learning algorithms like regression to predict patient health trends and generate more insightful, data-driven reports.
+- **Enhanced PDF Generation with ML:** Use machine learning algorithms like regression to predict patient health trends and generate more insightful, data-driven reports.
 
--**Report History Page:** Add a History Page to store and quickly access previously generated reports, reducing processing time and resource consumption.
+- **Report History Page:** Add a History Page to store and quickly access previously generated reports, reducing processing time and resource consumption.
 
--**DBMS for Authentication:** Switch to a Database Management System (DBMS) like Oracle or PostgreSQL for more secure and scalable user authentication, or integrate OAuth for third-party logins.
+- **DBMS for Authentication:** Switch to a Database Management System (DBMS) like Oracle or PostgreSQL for more secure and scalable user authentication, or integrate OAuth for third-party logins.
 
--**Cloud Deployment:** Deploy the app on cloud platforms like AWS, Google Cloud, or Heroku for global access, scalability, and better resource management.
+- **Cloud Deployment:** Deploy the app on cloud platforms like AWS, Google Cloud, or Heroku for global access, scalability, and better resource management.
 
 These customizations can improve performance, security, and user experience.
 
