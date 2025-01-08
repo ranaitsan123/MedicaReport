@@ -90,6 +90,23 @@ SECRET_KEY=your_secret_key_for_flask_app
 ```
 
 Replace ```your_groq_api_key``` with the API key you get from [Groq API](https://console.groq.com/keys) and ```your_secret_key_for_flask_app``` with a random string used to secure your Flask application.
+
+**Step 5: Set Up the Database (JSON Database)**
+
+The project uses a JSON file as the database for authentication. Make sure to place the user data in users.json inside the project directory.
+
+Example ```users.json``` structure:
+
+```json
+[
+  {
+    "username": "doctor1",
+    "password": "password123",
+    "role": "doctor"
+  }
+]
+```
+
 - [Download from Creative Tim](https://www.creative-tim.com/product/argon-dashboard)
 
 - Install with Npm: `npm i @creative-tim-official/argon-dashboard-free`
