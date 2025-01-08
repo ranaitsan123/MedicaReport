@@ -22,8 +22,8 @@ This tutorial will guide you through the process of installing and running Medic
 - [Resources](#resources)
 - [Help Us Fix Bugs!](#Help-Us-Fix-Bugs!)
 - [Technical Support or Questions](#technical-support-or-questions)
+- [Useful Links](#Resources)
 - [Licensing](#licensing)
-- [Useful Links](#useful-links)
 
 ## Demo
 
