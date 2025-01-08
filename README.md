@@ -13,6 +13,7 @@ This tutorial will guide you through the process of installing and running Medic
 - [Demo](#demo)
 - [Prerequisites](#Prerequisites)
 - [Quick Start](#quick-start)
+- [Running the Application](#Running-the-Application)
 - [File Structure](#file-structure)
 - [Browser Support](#browser-support)
 - [Resources](#resources)
@@ -106,6 +107,17 @@ Example ```users.json``` structure:
   }
 ]
 ```
+## Running the Application
+
+**Step 1: Start the Flask Server**
+
+Run the following command to start the Flask server:
+
+```bash
+python app.py
+```
+
+By default, the app will be accessible at http://localhost:5000.
 
 - [Download from Creative Tim](https://www.creative-tim.com/product/argon-dashboard)
 
