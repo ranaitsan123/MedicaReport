@@ -150,7 +150,7 @@ We use GitHub Issues as the official bug tracker for the Argon Dashboard. Here a
 
 ## Licensing
 
-- Copyright &copy; 2025 Aicha Lahnite (https://www.linkedin.com/in/aicha-lahnite/)
+- Copyright &copy; 2025 Aicha Lahnite ([Aicha Lahnite]https://www.linkedin.com/in/aicha-lahnite/)
 
 ## Useful Links
 
