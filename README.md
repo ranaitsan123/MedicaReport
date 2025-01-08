@@ -106,7 +106,7 @@ Example ```users.json``` structure:
   {
     "username": "doctor1",
     "password": "password123",
-    "role": "doctor"
+    "email": "email@email.com"
   }
 ]
 ```
@@ -241,7 +241,7 @@ Your contributions help make MedicaReport better for everyone — thank you for 
 
 ## Licensing
 
-- Copyright &copy; 2025 Aicha Lahnite [Aicha Lahnite](https://www.linkedin.com/in/aicha-lahnite/)
+- Copyright &copy; 2025 [Aicha Lahnite](https://www.linkedin.com/in/aicha-lahnite/) & [Marwan Khadrouf](https://www.linkedin.com/in/marwane-khadrouf-785636141/)
 
 ## Social Media
 
