@@ -250,19 +250,19 @@ JSON (JavaScript Object Notation) is used for storing and transferring patient d
 <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" width="64" height="64"> [Python](https://docs.python.org/3/)
 
 <!-- Flask -->
-<img src="https://upload.wikimedia.org/wikipedia/commons/6/67/Flask_logo.svg" width="64" height="64"> [Flask](https://flask.palletsprojects.com/)
+<img src="https://upload.wikimedia.org/wikipedia/commons/8/8d/Flask_logo.svg" width="64" height="64"> [Flask](https://flask.palletsprojects.com/)
 
 <!-- HTML -->
-<img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/HTML5_logo_and_wordmark.svg" width="64" height="64"> [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/640px-HTML5_logo_and_wordmark.svg.png" width="64" height="64"> [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
 
 <!-- CSS -->
 <img src="https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg" width="64" height="64"> [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
 
 <!-- JavaScript -->
-<img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg" width="64" height="64"> [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/640px-Unofficial_JavaScript_logo_2.svg.png" width="64" height="64"> [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
 <!-- JSON -->
-<img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/JSON_vector_logo.svg" width="64" height="64"> [JSON](https://www.json.org/json-en.html)
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/JSON_vector_logo.svg/640px-JSON_vector_logo.svg.png" width="64" height="64"> [JSON](https://www.json.org/json-en.html)
 
 ## Contributing
 
