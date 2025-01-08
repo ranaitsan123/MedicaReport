@@ -15,6 +15,7 @@ This tutorial will guide you through the process of installing and running Medic
 - [Quick Start](#quick-start)
 - [Running the Application](#Running-the-Application)
 - [File Structure](#file-structure)
+- [Features Overview](#Features-Overview)
 - [Browser Support](#browser-support)
 - [Resources](#resources)
 - [Reporting Issues](#reporting-issues)
@@ -119,6 +120,10 @@ python app.py
 
 By default, the app will be accessible at http://localhost:5000.
 
+**Step 2: Access the Web Interface**
+
+Open a web browser and visit http://localhost:5000. You will be presented with a login page.
+
 - [Download from Creative Tim](https://www.creative-tim.com/product/argon-dashboard)
 
 - Install with Npm: `npm i @creative-tim-official/argon-dashboard-free`
@@ -161,6 +166,32 @@ MedicaReport
   ├── human_vital_signs_dataset_2024.csv(data.zip extract)
   └── app.py
 ```
+
+## Features Overview
+
+**1. User Authentication**
+
+The app provides a simple login system using a JSON-based database for storing doctor credentials. Doctors can log in to access the dashboard and medical reports.
+
+**2. Dashboard & Reports pages**
+
+Once authenticated, doctors are redirected to the dashboard, where they can choose Reports page and see:
+
+- View a list of patients.
+- Access individual patient reports.
+- Download patient medical reports.
+
+**3. Report Generation**
+
+The app generates medical reports using vital signs data such as heart rate, respiratory rate, and body temperature. It also uses Groq's API for generating diagnoses and recommendations based on the data provided.
+
+**4. Reports Page**
+
+On the reports page, doctors can:
+
+- Select a patient.
+- View the patient’s medical report.
+- Download the report in a structured format.
 
 ## Browser Support
 
