@@ -72,6 +72,14 @@ python3 -m venv venv
 source venv/bin/activate
 ```
 
+**Step 3: Install Dependencies**
+
+Install the necessary Python dependencies using ```pip```:
+
+```bash
+pip install -r requirements.txt
+```
+
 - [Download from Creative Tim](https://www.creative-tim.com/product/argon-dashboard)
 
 - Install with Npm: `npm i @creative-tim-official/argon-dashboard-free`
