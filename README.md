@@ -50,9 +50,28 @@ You will also need a local environment setup (virtual environment recommended) f
 Start by cloning the MedicaReport repository to your local machine:
 
 ```bash
-git clone https://github.com/MarwaneMLE/MedicaReport.git
-cd MedicaReport
+git clone https://github.com/MarwaneMLE/generate-medical-report.git
+cd generate-medical-report
 ```
+
+**Step 2: Create a Virtual Environment**
+
+To keep your dependencies isolated, it's recommended to create a virtual environment.
+
+- For Windows:
+
+```bash
+python -m venv venv
+.\venv\Scripts\activate
+```
+
+- For macOS/Linux:
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
 - [Download from Creative Tim](https://www.creative-tim.com/product/argon-dashboard)
 
 - Install with Npm: `npm i @creative-tim-official/argon-dashboard-free`
