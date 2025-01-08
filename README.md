@@ -93,16 +93,12 @@ View <a href="https://demos.creative-tim.com/argon-dashboard/pages/dashboard.htm
 
 - Clone from Github: `git clone https://github.com/creativetimofficial/argon-dashboard.git`
 
-## Documentation
-
-The documentation for the Argon Dashboard is hosted at our [website](https://www.creative-tim.com/learning-lab/bootstrap/overview/argon-dashboard).
-
 ## File Structure
 
 Within the download you'll find the following directories and files:
 
 ```
-argon-dashboard
+MedicaReport
   ├── assets
   │   ├── css
   │   ├── fonts
@@ -116,12 +112,18 @@ argon-dashboard
   │   └── scss
   │       ├── argon-dashboard
   │       └── argon-dashboard.scss
-  ├── docs
-  │   ├── documentation.html
-  ├── pages
-  ├── CHANGELOG.md
-  ├── gulpfile.js
-  ├── package.json
+  ├── templates
+  │   ├── dashboard.html
+  │   ├── login.html
+  │   ├── signup.html
+  │   ├── reports.html
+  │   └── about.html
+  ├── api.py
+  ├── report_generator.py
+  ├── auth.py
+  ├── pdf_generator.py
+  ├── human_vital_signs_dataset_2024.csv(data.zip extract)
+  └── app.py
 ```
 
 ## Browser Support
@@ -148,8 +150,7 @@ We use GitHub Issues as the official bug tracker for the Argon Dashboard. Here a
 
 ## Licensing
 
-- Copyright &copy; 2022 Creative Tim (https://www.creative-tim.com)
-- Licensed under MIT (https://github.com/creativetimofficial/argon-dashboard/blob/master/LICENSE.md)
+- Copyright &copy; 2025 Aicha Lahnite (https://www.linkedin.com/in/aicha-lahnite/)
 
 ## Useful Links
 
