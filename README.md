@@ -20,7 +20,7 @@ This tutorial will guide you through the process of installing and running Medic
 - [Customization](#Customization)
 - [Contributing](#Contributing)
 - [Resources](#resources)
-- [Reporting Issues](#reporting-issues)
+- [Help Us Fix Bugs!](#Help-Us-Fix-Bugs!)
 - [Technical Support or Questions](#technical-support-or-questions)
 - [Licensing](#licensing)
 - [Useful Links](#useful-links)
@@ -227,13 +227,17 @@ Please ensure that your code follows the existing style and includes tests if ap
 - Support: <https://www.creative-tim.com/contact-us>
 - Issues: [Github Issues Page](https://github.com/creativetimofficial/argon-dashboard/issues)
 
-## Reporting Issues
+## Help Us Fix Bugs!
 
-We use GitHub Issues as the official bug tracker for the Argon Dashboard. Here are some advices for our users that want to report an issue:
+We’re actively working on improving MedicaReport, and we need your help! If you encounter any bugs or issues, we encourage you to contribute by fixing them. Here’s how you can get involved:
 
-1. Make sure that you are using the latest version of the Argon Dashboard. Check the CHANGELOG from your copy on our [website](https://www.creative-tim.com).
-2. Providing us reproducible steps for the issue will shorten the time it takes for it to be fixed.
-3. Some issues may be browser specific, so specifying in what browser you encountered the issue might help.
+1. **Report the Bug:** If you find a bug, please report it in the [Issues](https://github.com/MarwaneMLE/generate-medical-report/issues) section with clear steps to reproduce the problem.
+
+2. **Fix the Bug:** If you're familiar with the code, feel free to fix the issue. Fork the repository, create a branch, and submit a pull request with your changes.
+
+3. **Contribute Improvements:** Even if you don't find a bug, any improvements, optimizations, or enhancements are always welcome!
+
+Your contributions help make MedicaReport better for everyone — thank you for being part of the journey!
 
 ## Licensing
 
