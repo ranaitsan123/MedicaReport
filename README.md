@@ -80,6 +80,16 @@ Install the necessary Python dependencies using ```pip```:
 pip install -r requirements.txt
 ```
 
+**Step 4: Set Up Environment Variables**
+
+Create a ```.env``` file in the root of the project directory and add the following environment variables:
+
+```bash
+GROQ_API_KEY=your_groq_api_key
+SECRET_KEY=your_secret_key_for_flask_app
+```
+
+Replace ```your_groq_api_key``` with the API key you get from ![Groq API](https://console.groq.com/keys) and ```your_secret_key_for_flask_app``` with a random string used to secure your Flask application.
 - [Download from Creative Tim](https://www.creative-tim.com/product/argon-dashboard)
 
 - Install with Npm: `npm i @creative-tim-official/argon-dashboard-free`
