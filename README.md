@@ -221,7 +221,7 @@ Please ensure that your code follows the existing style and includes tests if ap
 
 ## Resources
 
-- Demo Video: <https://demos.creative-tim.com/argon-dashboard>
+- Demo Video: <https://www.canva.com/design/DAGboI1PCgI/kYq-3SsJBE_ZfUFsOExFJA/edit?utm_content=DAGboI1PCgI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton>
 - Documentation Boostrap Tempaltes: <https://www.creative-tim.com/learning-lab/bootstrap/overview/argon-dashboard>
 - MedicaReport Home Page: <https://medica-report.framer.website/>
 - Support: <https://www.linkedin.com/in/aicha-lahnite/>
