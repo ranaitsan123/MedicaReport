@@ -260,9 +260,9 @@ Your contributions help make MedicaReport better for everyone — thank you for 
 
 ## Social Media
 
-Twitter: <https://twitter.com/CreativeTim>
+Linkedin: [Aicha Lahnite](https://www.linkedin.com/in/aicha-lahnite/) | [Marwan](https://www.linkedin.com/in/marwane-khadrouf-785636141/)
 
-Facebook: <https://www.facebook.com/CreativeTim>
+Email: [Aicha Lahnite](halaicha300@gmail.com) | [Marwan](khmarwane10@gmail.com)
 
 Dribbble: <https://dribbble.com/creativetim>
 
