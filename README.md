@@ -17,6 +17,7 @@ This tutorial will guide you through the process of installing and running Medic
 - [File Structure](#file-structure)
 - [Features Overview](#Features-Overview)
 - [Browser Support](#browser-support)
+- [Contributing](#Contributing)
 - [Resources](#resources)
 - [Reporting Issues](#reporting-issues)
 - [Technical Support or Questions](#technical-support-or-questions)
@@ -124,16 +125,6 @@ By default, the app will be accessible at http://localhost:5000.
 
 Open a web browser and visit http://localhost:5000. You will be presented with a login page.
 
-- [Download from Creative Tim](https://www.creative-tim.com/product/argon-dashboard)
-
-- Install with Npm: `npm i @creative-tim-official/argon-dashboard-free`
-
-- Install with Yarn: `yarn add @creative-tim-official/argon-dashboard-free`
-
-- Install with Composer: `composer create-project creativetimofficial/argon-dashboard-free`
-
-- Clone from Github: `git clone https://github.com/creativetimofficial/argon-dashboard.git`
-
 ## File Structure
 
 Within the download you'll find the following directories and files:
@@ -198,6 +189,18 @@ On the reports page, doctors can:
 At present, we officially aim to support the last two versions of the following browsers:
 
 <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/chrome.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/firefox.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/edge.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/safari.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/opera.png" width="64" height="64">
+
+## Contributing
+
+We welcome contributions to improve MedicaReport. If you'd like to contribute, please follow these steps:
+
+1- Fork the repository.
+2- Create a new branch.
+3- Make your changes.
+4- Commit your changes.
+5- pen a pull request.
+
+Please ensure that your code follows the existing style and includes tests if applicable.
 
 ## Resources
 
