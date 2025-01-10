@@ -141,7 +141,7 @@ def generate_patient_pdf(report_string, path_to_wkhtmltopdf):
     config = pdfkit.configuration(wkhtmltopdf=path_to_wkhtmltopdf)
     
     # Generate the PDF from the HTML content
-    pdf = pdfkit.from_string(html_content, False, configuration=config, options={'encoding': 'UTF-8'})
+    pdf = pdfkit.from_string(html_content, False, configuration=config, options={'encoding':'UTF-8'})
 
     # Return the generated PDF as a BytesIO object (in-memory PDF)
     return BytesIO(pdf)
