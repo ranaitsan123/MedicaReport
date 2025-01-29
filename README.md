@@ -283,7 +283,6 @@ Please ensure that your code follows the existing style and includes tests if ap
 - MedicaReport Home Page: <https://medica-report.framer.website/>
 - Support: <https://www.linkedin.com/in/aicha-lahnite/>
 - Issues: [Github Issues Page](https://github.com/MarwaneMLE/generate-medical-report/issues)
-- Templates: [Argon Dashboard](https://github.com/creativetimofficial/argon-dashboard/blob/master/README.md)
 
 ## Help Us Fix Bugs!
 
