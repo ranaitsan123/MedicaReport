@@ -307,6 +307,6 @@ Linkedin: [Aicha Lahnite](https://www.linkedin.com/in/aicha-lahnite/) | [Marwane
 
 Email: halaicha300@gmail.com | khmarwane10@gmail.com
 
-Discord: aicha_a1000<halaicha300@gmail.com>
+Discord: aicha_a1000 <halaicha300@gmail.com>
 
 Github: [Aicha Lahnite](https://github.com/ranaitsan123) | [Marwan Khadrouf](https://github.com/MarwaneMLE)
