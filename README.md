@@ -54,7 +54,7 @@ You will also need a local environment setup (virtual environment recommended) f
 Start by cloning the MedicaReport repository to your local machine:
 
 ```bash
-git clone https://github.com/MarwaneMLE/MedicaReport.git
+git clone https://github.com/ranaitsan123/MedicaReport.git
 cd MedicaReport
 ```
 
